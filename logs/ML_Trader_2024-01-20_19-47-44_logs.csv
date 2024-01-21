@@ -1,0 +1,41 @@
+2024-01-20 19:47:44,170: root: INFO: ML_Trader : Executing the initialize lifecycle method
+2024-01-20 19:47:45,160: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-01-20 19:47:45,161: root: INFO: ML_Trader : Executing the before_market_opens lifecycle method
+2024-01-20 19:47:45,162: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-01-20 19:47:45,162: root: INFO: ML_Trader : Executing the before_starting_trading lifecycle method
+2024-01-20 19:47:45,163: root: INFO: [34mML_Trader : Executing the on_trading_iteration lifecycle method at 2024-01-20 19:47:45[0m
+2024-01-20 19:47:45,163: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-01-20 19:47:45,173: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-01-20 19:47:46,191: root: ERROR: too many values to unpack (expected 2)
+2024-01-20 19:47:46,193: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 829, in run
+    self._run_trading_session()
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 780, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 274, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 298, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 87, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 378, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\OneDrive\Desktop\Trading Bot\Trading-Bot\tradingbot.py", line 55, in on_trading_iteration
+    probability, sentiment = self.get_sentiment()
+    ^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+
+2024-01-20 19:47:46,194: root: INFO: ML_Trader : Executing the on_bot_crash event method
+2024-01-20 19:47:46,201: root: INFO: Backtesting finished
+2024-01-20 19:47:46,203: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-01-20 19:47:46,292: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2024-01-20 19:47:46,292: backtest_stats: INFO: Backtest took 0:00:02.124095 for a speed of 0.000

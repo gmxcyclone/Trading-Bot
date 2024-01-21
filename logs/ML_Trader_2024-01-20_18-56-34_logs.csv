@@ -1,0 +1,44 @@
+2024-01-20 18:56:34,745: root: INFO: ML_Trader : Executing the initialize lifecycle method
+2024-01-20 18:56:35,776: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-01-20 18:56:35,777: root: INFO: ML_Trader : Executing the before_market_opens lifecycle method
+2024-01-20 18:56:35,778: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-01-20 18:56:35,778: root: INFO: ML_Trader : Executing the before_starting_trading lifecycle method
+2024-01-20 18:56:35,779: root: INFO: [34mML_Trader : Executing the on_trading_iteration lifecycle method at 2024-01-20 18:56:35[0m
+2024-01-20 18:56:35,779: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-01-20 18:56:35,783: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-01-20 18:56:35,784: root: ERROR: 'REST' object has no attribute 'get_news'
+2024-01-20 18:56:35,785: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 829, in run
+    self._run_trading_session()
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 780, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 274, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 298, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 87, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 378, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\anaconda3\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dania\OneDrive\Desktop\Trading Bot\Trading-Bot\tradingbot.py", line 52, in on_trading_iteration
+    news = self.get_news()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\dania\OneDrive\Desktop\Trading Bot\Trading-Bot\tradingbot.py", line 41, in get_news
+    news = self.api.get_news(symbol= self.symbol, start= three_days, end= today)
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'REST' object has no attribute 'get_news'
+
+2024-01-20 18:56:35,787: root: INFO: ML_Trader : Executing the on_bot_crash event method
+2024-01-20 18:56:35,793: root: INFO: Backtesting finished
+2024-01-20 18:56:35,794: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-01-20 18:56:35,874: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2024-01-20 18:56:35,874: backtest_stats: INFO: Backtest took 0:00:01.130238 for a speed of 0.000
