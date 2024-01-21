@@ -59,7 +59,7 @@ class ML_Trader(Strategy):
                             self.symbol, 
                             quantity, 
                             "buy", 
-                            type="market", 
+                            type="bracket", 
                             take_profit_price=last_price*1.20, 
                             stop_loss_price=last_price*.95
                         )
